@@ -1,25 +1,37 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.13.35913.81 d17.13
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{54BF9AA9-BB23-4584-9417-CDC2749552E9}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{54BF9AA9-BB23-4584-9417-CDC2749552E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54BF9AA9-BB23-4584-9417-CDC2749552E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54BF9AA9-BB23-4584-9417-CDC2749552E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54BF9AA9-BB23-4584-9417-CDC2749552E9}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {791D3DDB-308B-4134-8E81-C53EBEDEDCCC}
-	EndGlobalSection
-EndGlobal
+//1-Take the grade from user and display A , B , C OR D
+ namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 0;
+            System.Console.WriteLine(" Hello, Enter Your grade please :");
+            x=int.Parse(System.Console.ReadLine());
+            if (x <=100 && x>=90)
+            {
+                Console.WriteLine("A");
+            }
+            else if (x <90 && x >=80)
+            {
+                Console.WriteLine("B");
+            }
+            else if (x < 80 && x >=70)
+            {
+                Console.WriteLine("c");
+            }
+            else if (x < 70 && x >= 60)
+            {
+                Console.WriteLine("D");
+            }
+            else if (x < 60 )
+            {
+                Console.WriteLine("Fail");
+            }
+            else 
+            {
+                Console.WriteLine("wrong number please enter a number beteen 0 and 100");
+            }
+        }
+    }
+}
