@@ -1,24 +1,59 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.13.35913.81
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp3", "ConsoleApp3\ConsoleApp3.csproj", "{528D071F-8713-402B-A09B-87B43E0EEAAF}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{528D071F-8713-402B-A09B-87B43E0EEAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{528D071F-8713-402B-A09B-87B43E0EEAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{528D071F-8713-402B-A09B-87B43E0EEAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{528D071F-8713-402B-A09B-87B43E0EEAAF}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E045649D-2894-4F24-B887-D305E638F287}
-	EndGlobalSection
-EndGlobal
+/*4-display this menu for user
+1 - Addition
+2 - Sub
+3 - Multiplication
+4 - Division if num2 == 0-- > cannot divide by zero
+5-Exit*/
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2, choice, Result;
+            Console.WriteLine("Please enter the 2 number :");
+            num1 = int.Parse(Console.ReadLine());
+            num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("choose what you want to do with the numbers :");
+            Console.WriteLine("1 - Addition");
+            Console.WriteLine("2 - Sub");
+            Console.WriteLine("3 - Multiplication");
+            Console.WriteLine("4 - Division");
+            Console.WriteLine("5-Exit");
+            choice = int.Parse(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    Result = num1 + num2;
+                    Console.WriteLine("The Result is :" + Result);
+                    break;
+                case 2:
+                    Result = num1 - num2;
+                    Console.WriteLine("The Result is :" + Result);
+                    break;
+                case 3:
+                    Result = num1 * num2;
+                    Console.WriteLine("The Result is :" + Result);
+                    break;
+                case 4:
+                    if (num2 == 0)
+                    {
+                        Console.WriteLine("Sorry cant divided by zero please try again ");
+                    }
+                    else
+                    {
+                        Result = num1 / num2;
+                        Console.WriteLine("The Result is :" + Result);
+                    }
+                    break;
+                case 5:
+                    Console.WriteLine("Thank you for using the program");
+                    break;
+
+
+            }
+        }
+    }
+}
